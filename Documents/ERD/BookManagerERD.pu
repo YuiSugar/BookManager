@@ -1,0 +1,78 @@
+@startuml
+
+entity publisher {
+  * id: int
+  --
+  * name: varchar(100)
+}
+
+entity book_collection {
+  * id: int
+  --
+  * name: varchar(100)
+}
+
+entity price_unit {
+  * id: int
+  --
+  * name: varchar(100)
+}
+
+entity book {
+  * id: int
+  --
+  * name: varchar(200)
+  * isbn: varchar(13)
+  * price_wo_tax: int
+  * price_w_tax: int
+  * pages: int
+  * publisher_id: int <<FK>>
+  * book_collection_id: int <<FK>>
+  * price_unit_id: int <<FK>>
+  * size_kind_id: int <<FK>>
+  book_shelf_id: int <<FK>>
+}
+
+entity person {
+  * id: int
+  --
+  * name: varchar(100)
+}
+
+entity person_kind {
+  * id: int
+  --
+  * name: varchar(100)
+}
+
+entity book_person {
+  * book_id: int <<FK>>
+  * person_id: int <<FK>>
+  * person_kind_id: int <<FK>>
+}
+
+entity book_shelf {
+  * id: int
+  --
+  * name: varchar(100)
+}
+
+entity size_kind {
+  * id: int
+  --
+  * name: varchar(100)
+  * width: int
+  * height: int
+}
+
+
+book }|..|| publisher
+book }|..|| book_collection
+book }|..|| price_unit
+book_person ||..|| book
+book_person }|..|| person
+book_person }|..|| person_kind
+book_shelf }o..o| book
+size_kind ||..|{ book
+
+@enduml
