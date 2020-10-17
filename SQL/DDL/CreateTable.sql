@@ -44,6 +44,7 @@ CREATE TABLE book_db.book (
     isbn VARCHAR(13) NOT NULL,
     price_wo_tax INT NOT NULL,
     price_w_tax INT NOT NULL,
+    pages INT NOT NULL,
     publisher_id INT NOT NULL,
     book_collection_id INT,
     price_unit_id INT NOT NULL,
