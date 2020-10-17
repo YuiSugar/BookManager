@@ -1,0 +1,9 @@
+DROP TABLE book_db.book_person;
+DROP TABLE book_db.person;
+DROP TABLE book_db.person_kind;
+DROP TABLE book_db.book;
+DROP TABLE book_db.price_unit;
+DROP TABLE book_db.size_kind;
+DROP TABLE book_db.book_shelf;
+DROP TABLE book_db.book_collection;
+DROP TABLE book_db.publisher;
