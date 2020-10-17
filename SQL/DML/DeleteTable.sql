@@ -1,0 +1,9 @@
+DELETE FROM book_db.book_person;
+DELETE FROM book_db.person;
+DELETE FROM book_db.person_kind;
+DELETE FROM book_db.book;
+DELETE FROM book_db.price_unit;
+DELETE FROM book_db.size_kind;
+DELETE FROM book_db.book_shelf;
+DELETE FROM book_db.book_collection;
+DELETE FROM book_db.publisher;
